@@ -7,17 +7,17 @@ author: Gaurav Ojha
 
 All the files required can be found with the repository
 ***
-![794b842c38893b4bc710b76f83db24f1.png](MapReduce/_resources/794b842c38893b4bc710b76f83db24f1.png)
+![794b842c38893b4bc710b76f83db24f1.png](_resources/794b842c38893b4bc710b76f83db24f1.png)
 ***
-![5e0ea08b204581ee824400db0e414b36.png](MapReduce/_resources/5e0ea08b204581ee824400db0e414b36.png)
+![5e0ea08b204581ee824400db0e414b36.png](_resources/5e0ea08b204581ee824400db0e414b36.png)
 ***
-![9a0237d138f2afbd9f4fd8bc4bc02f92.png](MapReduce/_resources/9a0237d138f2afbd9f4fd8bc4bc02f92.png)
+![9a0237d138f2afbd9f4fd8bc4bc02f92.png](_resources/9a0237d138f2afbd9f4fd8bc4bc02f92.png)
 ***
-![eae7d6edf98ac5eb54e1f62f4d0696f3.png](MapReduce/_resources/eae7d6edf98ac5eb54e1f62f4d0696f3.png)
+![eae7d6edf98ac5eb54e1f62f4d0696f3.png](_resources/eae7d6edf98ac5eb54e1f62f4d0696f3.png)
 
 Get the top 10 trending songs
 ***
-![bdb9260ee035e53c567b7187be12f0da.png](MapReduce/_resources/bdb9260ee035e53c567b7187be12f0da.png)
+![bdb9260ee035e53c567b7187be12f0da.png](_resources/bdb9260ee035e53c567b7187be12f0da.png)
 
 The most straightforward approach involves utilizing GFS directly within the client application: extracting all the necessary data and processing it. However, this approach introduces several challenges:
 
@@ -25,15 +25,15 @@ The most straightforward approach involves utilizing GFS directly within the cli
 - When a single client application endeavors to process multiple terabytes of files, a substantial amount of time is inevitably consumed.
 
 To address these issues, an alternative solution emerges: rather than transporting data to the client, relocate the processing function to the data itself.
-![8a367b0335908855047e7585d5234e3f.png](MapReduce/_resources/8a367b0335908855047e7585d5234e3f.png)
-![b9b7e8ebd05f2576a155873001f230a6.png](MapReduce/_resources/b9b7e8ebd05f2576a155873001f230a6.png)
-![558d037065e105d2e7a6998d3c1ad937.png](MapReduce/_resources/558d037065e105d2e7a6998d3c1ad937.png)
-![b1b26a493911615b9b7199fc759f8b29.png](MapReduce/_resources/b1b26a493911615b9b7199fc759f8b29.png)
+![8a367b0335908855047e7585d5234e3f.png](_resources/8a367b0335908855047e7585d5234e3f.png)
+![b9b7e8ebd05f2576a155873001f230a6.png](_resources/b9b7e8ebd05f2576a155873001f230a6.png)
+![558d037065e105d2e7a6998d3c1ad937.png](_resources/558d037065e105d2e7a6998d3c1ad937.png)
+![b1b26a493911615b9b7199fc759f8b29.png](_resources/b1b26a493911615b9b7199fc759f8b29.png)
 This programming paradigm, in which instead of extracting data from multiple servers, you deploy your code onto numerous servers and instruct them to execute or process that code, is known as MapReduce.
 ***
 ## Map + Reduce
 
-![684b871e7047017ad2600d870dcb3752.png](MapReduce/_resources/684b871e7047017ad2600d870dcb3752.png)
+![684b871e7047017ad2600d870dcb3752.png](_resources/684b871e7047017ad2600d870dcb3752.png)
 The mapping function involves iterating through the file line by line, and for each song, it is stored in a hashmap. A counter is maintained for each unique key in the hashmap. When the same song is encountered again, the corresponding count is incremented. 
 
 The second component is the reduce function, responsible for aggregating the results from each of these individual server functions.
@@ -54,13 +54,13 @@ The second component is the reduce function, responsible for aggregating the res
 - Upon final aggregation of all counts, the ultimate output is stored at a designated location within the GFS or External database.
 ***
 Use Case:
-![715e55412eaaccc3e87f02bf53fe06f3.png](MapReduce/_resources/715e55412eaaccc3e87f02bf53fe06f3.png)
+![715e55412eaaccc3e87f02bf53fe06f3.png](_resources/715e55412eaaccc3e87f02bf53fe06f3.png)
 ***
 ## Fault Tolerance 
-![12c0157c52221520ec5d77f9673135d2.png](MapReduce/_resources/12c0157c52221520ec5d77f9673135d2.png)
+![12c0157c52221520ec5d77f9673135d2.png](_resources/12c0157c52221520ec5d77f9673135d2.png)
 ***
 ## Processing Speeds
-![cffc177586f860820bfbeebb27cb70b2.png](MapReduce/_resources/cffc177586f860820bfbeebb27cb70b2.png)
+![cffc177586f860820bfbeebb27cb70b2.png](_resources/cffc177586f860820bfbeebb27cb70b2.png)
 ***
 # References:
 1. https://www.youtube.com/watch?v=MAJ0aW5g17c
