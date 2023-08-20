@@ -1,7 +1,13 @@
-# Big Data
-Utilize this repository as a comprehensive resource encompassing both code files and theoretical insights pertaining to Big Data Technology and Analytics.
+# Big Data Resource Repository
 
-0. Linux Terminal Commands
-1. HDFS 
-2. MapReduce
+Welcome to our comprehensive repository that serves as a valuable hub for a wide range of resources, including code files and in-depth theoretical insights, all centered around Big Data Technology and Analytics.
 
+Expect consistent updates to this repository, aligning with each lecture and session.
+
+## Contents:
+
+0. Essential Linux Terminal Commands
+1. Understanding Hadoop Distributed File System (HDFS)
+2. Mastering MapReduce Framework
+
+Explore, learn, and excel in the realm of Big Data.
