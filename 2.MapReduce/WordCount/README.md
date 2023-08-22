@@ -18,7 +18,7 @@ Create a file with the name word.txt  and add some data to it.
 touch word.txt
 gedit word.txt
 ```
-![755cc8b70b048c13fb3f6dcfdb88c383.png](2.MapReduce/WordCount/_resources/755cc8b70b048c13fb3f6dcfdb88c383.png)
+![755cc8b70b048c13fb3f6dcfdb88c383.png](/2.MapReduce/WordCount/_resources/755cc8b70b048c13fb3f6dcfdb88c383.png)
 
 ## Step 2: Create mapper.py to implement mapper logic
 
