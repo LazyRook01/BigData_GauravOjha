@@ -2,20 +2,18 @@
 title: 'MapReduce: Count and Sum'
 updated: 2023-08-22 16:26:25Z
 created: 2023-08-22 12:16:26Z
-latitude: 19.08433770
-longitude: 72.83597240
-altitude: 0.0000
+author: Gaurav Ojha
 ---
 
 ## Step 1: Create a directory named "sum"
 
 `hdfs dfs -mkdir /sum`
-![8f6271817253d824b0449e880c7ce75b.png](../_resources/8f6271817253d824b0449e880c7ce75b.png)
+![8f6271817253d824b0449e880c7ce75b.png](/2.MapReduce/count_and_sum/_resources/8f6271817253d824b0449e880c7ce75b.png)
 
 ## Step 2: Upload example.txt from LFS to HDFS
 
 `hdfs dfs -put example.txt /sum`
-![b841835e30e9f6313f03e5ab5a803bb5.png](../_resources/b841835e30e9f6313f03e5ab5a803bb5.png)
+![b841835e30e9f6313f03e5ab5a803bb5.png](/2.MapReduce/count_and_sum/_resources/b841835e30e9f6313f03e5ab5a803bb5.png)
 
 ## Step 3: Create mapper.py
 ```
@@ -84,7 +82,7 @@ In summary, this script reads tab-separated input lines, expects each line to ha
 ## Step 4: Test mapper.py locally
 
 `cat example.txt | python mapper.py`
-![0d8460c74074f1eb90da6615a19e4a99.png](../_resources/0d8460c74074f1eb90da6615a19e4a99.png)
+![0d8460c74074f1eb90da6615a19e4a99.png](/2.MapReduce/count_and_sum/_resources/0d8460c74074f1eb90da6615a19e4a99.png)
 
 ## Step 5: Create reducer.py
 
@@ -181,7 +179,7 @@ In summary, this script processes input data representing transactions with loca
 
 ## Step 6: Test reducer.py locally
 `cat example.txt | python mapper.py | python reducer.py`
-![6ea949cfce6e8e1500c7183b3c868497.png](../_resources/6ea949cfce6e8e1500c7183b3c868497.png)
+![6ea949cfce6e8e1500c7183b3c868497.png](/2.MapReduce/count_and_sum/_resources/6ea949cfce6e8e1500c7183b3c868497.png)
 
 ## Step 7: Make the python scripts - mapper.py and reducer.py executable
 
@@ -194,5 +192,5 @@ hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-mr1
 ```
 
 ## Step 9: View the output
-![0f14ecc0d933f3e359b2ded5c533a65b.png](../_resources/0f14ecc0d933f3e359b2ded5c533a65b.png)
+![0f14ecc0d933f3e359b2ded5c533a65b.png](/2.MapReduce/count_and_sum/_resources/0f14ecc0d933f3e359b2ded5c533a65b.png)
 
