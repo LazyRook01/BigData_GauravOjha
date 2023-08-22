@@ -18,7 +18,7 @@ Create a file with the name word.txt  and add some data to it.
 touch word.txt
 gedit word.txt
 ```
-![755cc8b70b048c13fb3f6dcfdb88c383.png](../_resources/755cc8b70b048c13fb3f6dcfdb88c383.png)
+![755cc8b70b048c13fb3f6dcfdb88c383.png](2.MapReduce/WordCount/_resources/755cc8b70b048c13fb3f6dcfdb88c383.png)
 
 ## Step 2: Create mapper.py to implement mapper logic
 
@@ -80,7 +80,7 @@ These intermediate key-value pairs are then grouped and shuffled by the Hadoop f
 
 `cat word.txt | python mapper.py`
 
-![30a27c97c76df0ad169b28ab07153d15.png](../_resources/30a27c97c76df0ad169b28ab07153d15.png)
+![30a27c97c76df0ad169b28ab07153d15.png](2.MapReduce/WordCount/_resources/30a27c97c76df0ad169b28ab07153d15.png)
 
 ## Step 3:  Create reducer.py to implement reducer logic
 
@@ -159,7 +159,7 @@ cat word.txt | python mapper.py | sort -k1,1 | python reducer.py
 ```
 
 
-![b587f44b86ddad6f6f47fdcfa699fbf5.png](../_resources/b587f44b86ddad6f6f47fdcfa699fbf5.png)
+![b587f44b86ddad6f6f47fdcfa699fbf5.png](2.MapReduce/WordCount/_resources/b587f44b86ddad6f6f47fdcfa699fbf5.png)
 
 ## Step 4: Create a WordCount directory in HDFS
 
@@ -171,7 +171,7 @@ Syntax to copy a file from your local file system to the HDFS is given below:
 
 `hdfs dfs -copyFromLocal word.txt /WordCount`
 
-![f0fad3e3fb83e27757a7b1c63e7af337.png](../_resources/f0fad3e3fb83e27757a7b1c63e7af337.png)
+![f0fad3e3fb83e27757a7b1c63e7af337.png](2.MapReduce/WordCount/_resources/f0fad3e3fb83e27757a7b1c63e7af337.png)
 
 ## Step 6: Make mapper.py and reducer.py executable
 
@@ -194,7 +194,7 @@ hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-mr1
 hdfs dfs -cat /WordCount/output/part-00000
 ```
 
-![1811976c17b15294a5599167b5faaafc.png](../_resources/1811976c17b15294a5599167b5faaafc.png)
+![1811976c17b15294a5599167b5faaafc.png](2.MapReduce/WordCount/_resources/1811976c17b15294a5599167b5faaafc.png)
 ***
 # References
 1. https://www.geeksforgeeks.org/hadoop-streaming-using-python-word-count-problem/
