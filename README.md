@@ -9,5 +9,6 @@ Expect consistent updates to this repository, aligning with each lecture and ses
 0. Essential Linux Terminal Commands
 1. Understanding Hadoop Distributed File System (HDFS)
 2. Mastering MapReduce Framework
+3. Hive
 
 Explore, learn, and excel in the realm of Big Data.
