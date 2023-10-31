@@ -1,7 +1,7 @@
 ---
 title: HBase
-updated: 2023-10-31 04:09:50Z
-created: 2023-10-31 03:28:57Z
+updated: 2023-11-01 04:09:50Z
+created: 2023-11-01 03:28:57Z
 ---
 
 # Overview
@@ -60,7 +60,7 @@ HBase, as a column-oriented database, offers a distinct data organization model 
 
 Overall, HBase's column-oriented approach, combined with its schema flexibility and support for sparse data, makes it a powerful tool for handling large-scale datasets, especially in use cases that demand quick access to specific data points within a distributed and scalable environment.
 
-![456f1f1d63bb641032fa3646c83f13eb.png](/_resources/456f1f1d63bb641032fa3646c83f13eb.png)
+![456f1f1d63bb641032fa3646c83f13eb.png](_resources/456f1f1d63bb641032fa3646c83f13eb.png)
 
 
 Apache HBase, a distributed, scalable, and non-relational database built on top of the Hadoop Distributed File System (HDFS), employs a unique storage mechanism to handle vast amounts of sparse data. Its storage mechanism revolves around a few key components:
@@ -84,7 +84,7 @@ By employing this storage mechanism, HBase optimizes data storage, retrieval, an
 6. Data Replication
 ***
 # 6. HBase Architecture
-![a1626ee2338279f37ca4d0c92fb19fdf.png](/_resources/a1626ee2338279f37ca4d0c92fb19fdf.png)
+![a1626ee2338279f37ca4d0c92fb19fdf.png](_resources/a1626ee2338279f37ca4d0c92fb19fdf.png)
 
 3 basic components:
 1. A client library 
@@ -99,7 +99,7 @@ By employing this storage mechanism, HBase optimizes data storage, retrieval, an
 	- Decide the size of the region by following the region size thresholds.
 
 ## Regions
-![04869e38511925d4c6a81e40c95341e3.png](/_resources/04869e38511925d4c6a81e40c95341e3.png)
+![04869e38511925d4c6a81e40c95341e3.png](_resources/04869e38511925d4c6a81e40c95341e3.png)
 
 Mem-store is like cache memory - anything that is entered into the HBase is automatically stored as it is. Later the data is transferred and saved into Hfiles as blocks and the Mem Store is erased out. 
 
